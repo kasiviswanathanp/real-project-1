@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Anbu Physiotherapy Clinic - Physiotherapy and child specialist care in Anaiyur, Madurai.">
+  <title>Anbu Physiotherapy Clinic | Madurai</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #0f766e;
+      --primary-dark: #115e59;
+      --secondary: #e6fffb;
+      --accent: #14b8a6;
+      --dark: #12302e;
+      --text: #526563;
+      --white: #ffffff;
+      --light: #f6fbfa;
+      --border: #dcebea;
+      --shadow: 0 15px 40px rgba(15, 118, 110, 0.10);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .navbar {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      color: var(--dark);
+      font-size: 1.05rem;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: var(--primary);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 1.3rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--dark);
+      font-weight: 600;
+      font-size: 0.94rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .menu-btn {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 1.7rem;
+      cursor: pointer;
+      color: var(--dark);
+    }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: white;
+    }
+
+    .btn-outline:hover {
+      background: var(--secondary);
+    }
+
+    /* HERO */
+    .hero {
+      background:
+        radial-gradient(circle at 90% 20%, rgba(20, 184, 166, 0.18), transparent 30%),
+        linear-gradient(135deg, #f4fffd, #ffffff);
+      padding: 85px 0 75px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--primary);
+      background: var(--secondary);
+      padding: 7px 13px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      color: var(--dark);
+      font-size: clamp(2.4rem, 5vw, 4.4rem);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: var(--primary);
+    }
+
+    .hero p {
+      max-width: 610px;
+      font-size: 1.08rem;
+      margin-bottom: 28px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 35px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .doctor-avatar {
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 22px;
+      border-radius: 50%;
+      background: var(--secondary);
+      display: grid;
+      place-items: center;
+      font-size: 3rem;
+    }
+
+    .hero-card h3 {
+      color: var(--dark);
+      text-align: center;
+      font-size: 1.45rem;
+    }
+
+    .hero-card .qualification {
+      text-align: center;
+      color: var(--primary);
+      font-weight: 700;
+      margin-top: 5px;
+    }
+
+    .clinic-mini {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 80px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 45px;
+    }
+
+    .section-heading .eyebrow {
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2 {
+      color: var(--dark);
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    /* ABOUT */
+    .about {
+      background: var(--light);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-visual {
+      min-height: 390px;
+      border-radius: 28px;
+      background:
+        linear-gradient(rgba(15,118,110,0.12), rgba(15,118,110,0.12)),
+        var(--secondary);
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--border);
+    }
+
+    .about-visual .medical-symbol {
+      font-size: 7rem;
+    }
+
+    .about-content h2 {
+      color: var(--dark);
+      font-size: 2.4rem;
+      margin-bottom: 15px;
+    }
+
+    .about-content p {
+      margin-bottom: 15px;
+    }
+
+    .doctor-info {
+      margin-top: 25px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .doctor-info div {
+      padding: 14px 16px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    .doctor-info strong {
+      color: var(--dark);
+    }
+
+    /* SERVICES */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: white;
+      box-shadow: 0 8px 25px rgba(18, 48, 46, 0.05);
+      transition: 0.25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+      border-color: #b8e5df;
+    }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 15px;
+      background: var(--secondary);
+      display: grid;
+      place-items: center;
+      font-size: 1.5rem;
+      margin-bottom: 17px;
+    }
+
+    .service-card h3 {
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+
+    /* WHY US */
+    .why {
+      background: var(--light);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .why-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 25px 20px;
+      text-align: center;
+    }
+
+    .why-card .number {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 14px;
+      font-weight: 800;
+    }
+
+    .why-card h3 {
+      color: var(--dark);
+      margin-bottom: 7px;
+    }
+
+    /* TEAM */
+    .team-card {
+      max-width: 850px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 30px;
+      align-items: center;
+      padding: 30px;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .team-avatar {
+      width: 180px;
+      height: 180px;
+      border-radius: 22px;
+      background: var(--secondary);
+      display: grid;
+      place-items: center;
+      font-size: 4rem;
+    }
+
+    .team-card h3 {
+      color: var(--dark);
+      font-size: 1.6rem;
+      margin-bottom: 5px;
+    }
+
+    .team-card .role {
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    /* APPOINTMENT */
+    .appointment {
+      background: var(--dark);
+      color: #d8eeeb;
+    }
+
+    .appointment-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    .appointment h2 {
+      color: white;
+      font-size: 2.5rem;
+      line-height: 1.15;
+      margin-bottom: 15px;
+    }
+
+    .appointment-info {
+      margin-top: 25px;
+      display: grid;
+      gap: 13px;
+    }
+
+    .appointment-info div {
+      padding: 13px 15px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 12px;
+    }
+
+    .appointment-form {
+      background: white;
+      padding: 30px;
+      border-radius: 24px;
+      color: var(--text);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      color: var(--dark);
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      outline: none;
+      font: inherit;
+      background: #fbfefe;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(20,184,166,0.1);
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .form-note {
+      font-size: 0.8rem;
+      margin-top: 10px;
+    }
+
+    /* CONTACT */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .contact-card {
+      padding: 28px;
+      text-align: center;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+    }
+
+    .contact-card .icon {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .contact-card h3 {
+      color: var(--dark);
+      margin-bottom: 7px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0b2422;
+      color: #a8c4c1;
+      padding: 45px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    footer h3, footer h4 {
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      font-size: 0.92rem;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      font-size: 0.82rem;
+    }
+
+    /* WHATSAPP */
+    .floating-whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #25d366;
+      color: white;
+      font-size: 1.55rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      z-index: 900;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero-grid,
+      .about-grid,
+      .appointment-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero {
+        padding-top: 55px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .navbar {
+        min-height: 68px;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        display: none;
+        flex-direction: column;
+        padding: 20px;
+        gap: 18px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links .btn {
+        width: 100%;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      .service-grid,
+      .why-grid,
+      .contact-grid,
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .team-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .team-avatar {
+        margin: auto;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .hero-card {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container navbar">
+      <a href="#home" class="logo">
+        <span class="logo-icon">✚</span>
+        <span>Anbu Physiotherapy Clinic</span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#doctors">Doctors</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#appointment" class="btn btn-primary">Appointment</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+
+        <div>
+          <span class="eyebrow">PHYSIOTHERAPY & CHILD CARE</span>
+
+          <h1>
+            Move Better.<br>
+            <span>Live Better.</span>
+          </h1>
+
+          <p>
+            Welcome to Anbu Physiotherapy Clinic, where personalized
+            physiotherapy care is focused on helping patients improve
+            movement, comfort and everyday quality of life.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#appointment" class="btn btn-primary">Book an Appointment →</a>
+            <a href="#services" class="btn btn-outline">Explore Services</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="doctor-avatar">👩‍⚕️</div>
+          <h3>Dr. J. Jenani</h3>
+          <p class="qualification">BPT., MPT (Ortho)</p>
+
+          <div class="clinic-mini">
+            <strong>Anbu Physiotherapy Clinic</strong>
+            <p>H/98, TNHB Colony, Malligai Nagar,<br>
+              Anaiyur, Madurai, Tamil Nadu - 625017</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="container about-grid">
+
+        <div class="about-visual">
+          <div class="medical-symbol">🩺</div>
+        </div>
+
+        <div class="about-content">
+          <span class="eyebrow">ABOUT THE CLINIC</span>
+          <h2>Care that focuses on your recovery.</h2>
+
+          <p>
+            Anbu Physiotherapy Clinic provides a welcoming environment
+            for physiotherapy assessment, treatment and rehabilitation.
+          </p>
+
+          <p>
+            Our goal is to understand each patient's needs and create
+            a practical treatment approach that supports better movement
+            and daily activities.
+          </p>
+
+          <div class="doctor-info">
+            <div>
+              <strong>Physiotherapy Doctor:</strong><br>
+              Dr. J. Jenani — BPT., MPT (Ortho)
+            </div>
+
+            <div>
+              <strong>Child Specialist:</strong><br>
+              Dr. M. Jeyaraj — MBBS., DCH
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">OUR SERVICES</span>
+          <h2>Physiotherapy care for different needs</h2>
+          <p>
+            These are temporary website service categories and can be
+            changed tomorrow according to the clinic's actual services.
+          </p>
+        </div>
+
+        <div class="service-grid">
+
+          <article class="service-card">
+            <div class="service-icon">🦴</div>
+            <h3>Orthopedic Physiotherapy</h3>
+            <p>Supportive rehabilitation for common musculoskeletal conditions and movement difficulties.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🏃</div>
+            <h3>Sports Rehabilitation</h3>
+            <p>Exercise-based rehabilitation support for recovery and return to regular activities.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🧘</div>
+            <h3>Back & Neck Care</h3>
+            <p>Individualized physiotherapy approaches for mobility, posture and everyday comfort.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🦵</div>
+            <h3>Joint Rehabilitation</h3>
+            <p>Guided rehabilitation to support strength, flexibility and functional movement.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">👶</div>
+            <h3>Pediatric Support</h3>
+            <p>Child-focused care and consultation through the clinic's child specialist.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">💪</div>
+            <h3>Exercise Therapy</h3>
+            <p>Planned therapeutic exercises designed around individual assessment and goals.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="why">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">OUR APPROACH</span>
+          <h2>A simple approach to better care</h2>
+        </div>
+
+        <div class="why-grid">
+
+          <div class="why-card">
+            <div class="number">01</div>
+            <h3>Assessment</h3>
+            <p>Understand the patient's condition and movement needs.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="number">02</div>
+            <h3>Plan</h3>
+            <p>Create a treatment approach based on individual needs.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="number">03</div>
+            <h3>Treatment</h3>
+            <p>Follow appropriate physiotherapy and exercise strategies.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="number">04</div>
+            <h3>Progress</h3>
+            <p>Monitor progress and adjust the approach when required.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- DOCTORS -->
+    <section id="doctors">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">OUR DOCTORS</span>
+          <h2>Meet the healthcare professionals</h2>
+        </div>
+
+        <div class="team-card">
+          <div class="team-avatar">👩‍⚕️</div>
+
+          <div>
+            <h3>Dr. J. Jenani</h3>
+            <p class="role">BPT., MPT (Ortho) — Physiotherapy Doctor</p>
+            <p>
+              Providing physiotherapy-focused care and rehabilitation
+              support at Anbu Physiotherapy Clinic.
+            </p>
+          </div>
+        </div>
+
+        <br>
+
+        <div class="team-card">
+          <div class="team-avatar">👨‍⚕️</div>
+
+          <div>
+            <h3>Dr. M. Jeyaraj</h3>
+            <p class="role">MBBS., DCH — Child Specialist</p>
+            <p>
+              Child specialist consultation available at Anbu
+              Physiotherapy Clinic.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- APPOINTMENT -->
+    <section class="appointment" id="appointment">
+      <div class="container appointment-grid">
+
+        <div>
+          <span class="eyebrow">APPOINTMENT</span>
+          <h2>Take the first step toward better care.</h2>
+
+          <p>
+            Fill in the form and the clinic can contact you to confirm
+            the appointment. This form is currently frontend-only.
+          </p>
+
+          <div class="appointment-info">
+            <div>📍 Madurai, Tamil Nadu</div>
+            <div>🏥 Anbu Physiotherapy Clinic</div>
+            <div>🕐 Clinic timings: Please confirm with the clinic</div>
+          </div>
+        </div>
+
+        <form class="appointment-form" id="appointmentForm">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" placeholder="Your name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="Your phone number" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="date">Preferred Date</label>
+              <input type="date" id="date">
+            </div>
+
+            <div class="form-group">
+              <label for="service">Service</label>
+              <select id="service">
+                <option value="">Select a service</option>
+                <option>Orthopedic Physiotherapy</option>
+                <option>Sports Rehabilitation</option>
+                <option>Back & Neck Care</option>
+                <option>Joint Rehabilitation</option>
+                <option>Pediatric Support</option>
+                <option>Exercise Therapy</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Briefly describe your requirement"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Request Appointment</button>
+
+          <p class="form-note">
+            Demo only: this form does not send or store patient information yet.
+          </p>
+
+        </form>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">CONTACT</span>
+          <h2>Visit Anbu Physiotherapy Clinic</h2>
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-card">
+            <div class="icon">📍</div>
+            <h3>Clinic Address</h3>
+            <p>
+              H/98, TNHB Colony,<br>
+              Malligai Nagar, Anaiyur,<br>
+              Madurai, Tamil Nadu - 625017
+            </p>
+          </div>
+
+          <div class="contact-card">
+            <div class="icon">👩‍⚕️</div>
+            <h3>Physiotherapy</h3>
+            <p>Dr. J. Jenani<br>BPT., MPT (Ortho)</p>
+          </div>
+
+          <div class="contact-card">
+            <div class="icon">👶</div>
+            <h3>Child Specialist</h3>
+            <p>Dr. M. Jeyaraj<br>MBBS., DCH</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+        <div>
+          <h3>Anbu Physiotherapy Clinic</h3>
+          <p>
+            Physiotherapy and healthcare support in Anaiyur, Madurai.
+          </p>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <p><a href="#about">About</a></p>
+          <p><a href="#services">Services</a></p>
+          <p><a href="#doctors">Doctors</a></p>
+          <p><a href="#appointment">Appointment</a></p>
+        </div>
+
+        <div>
+          <h4>Location</h4>
+          <p>H/98, TNHB Colony</p>
+          <p>Malligai Nagar, Anaiyur</p>
+          <p>Madurai - 625017</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © <span id="year"></span> Anbu Physiotherapy Clinic. All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP PLACEHOLDER -->
+  <!-- Replace # with the real WhatsApp link after getting the clinic number. -->
+  <a href="#" class="floating-whatsapp" aria-label="WhatsApp">☘</a>
+
+  <script>
+    // Mobile navigation
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+    // Close mobile menu after clicking a link
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+    });
+
+    // Demo appointment form
+    const appointmentForm = document.getElementById("appointmentForm");
+
+    appointmentForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      alert(
+        "Thank you! Your appointment request has been recorded only as a frontend demo. Backend functionality will be added later."
+      );
+
+      appointmentForm.reset();
+    });
+
+    // Current year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
