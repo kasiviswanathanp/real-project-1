@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Anbu Physiotherapy Clinic - Dr. J. Jenani, BPT., MPT (Ortho), Madurai.">
+<title>Anbu Physiotherapy Clinic | Premium Care</title>
+<style>
+:root{
+  --bg:#07110f;--surface:#0d1c19;--surface2:#122722;--text:#eaf7f4;--muted:#9bb7b2;
+  --primary:#31d0b1;--primary2:#8bf1dc;--line:#1d3b35;--danger:#ff8d8d;
+  --shadow:0 25px 70px rgba(0,0,0,.35)
+}
+[data-theme="light"]{
+  --bg:#f4faf8;--surface:#fff;--surface2:#eaf6f2;--text:#102d29;--muted:#617873;
+  --primary:#087f70;--primary2:#0b9f8c;--line:#d6e8e3;--shadow:0 20px 50px rgba(16,45,41,.10)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;transition:.25s}
+a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}
+.container{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:12px;font-weight:900}
+.logo-mark{width:42px;height:42px;border-radius:13px;background:var(--primary);color:#06201b;display:grid;place-items:center;font-size:22px}
+nav{display:flex;align-items:center;gap:25px}nav a{color:var(--muted);font-weight:650;font-size:14px}nav a:hover{color:var(--primary)}
+.actions{display:flex;align-items:center;gap:9px}
+.icon-btn{width:42px;height:42px;border:1px solid var(--line);border-radius:50%;background:var(--surface);color:var(--text);cursor:pointer}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:12px;padding:13px 19px;font-weight:800;cursor:pointer;transition:.2s}
+.btn-primary{background:var(--primary);color:#05201b}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(49,208,177,.22)}
+.btn-ghost{border:1px solid var(--line);background:var(--surface);color:var(--text)}
+.menu{display:none}
+
+.hero{padding:100px 0 80px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:rgba(49,208,177,.10);filter:blur(90px);right:-160px;top:-180px}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:60px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border:1px solid var(--line);border-radius:99px;background:var(--surface);color:var(--primary2);font-size:12px;font-weight:850;letter-spacing:.7px}
+h1{font-size:clamp(45px,6vw,76px);line-height:1.02;letter-spacing:-3px;margin:20px 0}
+.gradient{color:var(--primary)}
+.lead{font-size:18px;color:var(--muted);max-width:650px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0}
+.stats{display:flex;gap:25px;flex-wrap:wrap;color:var(--muted);font-size:13px}
+.stats strong{display:block;color:var(--text);font-size:18px}
+.hero-panel{background:linear-gradient(145deg,var(--surface2),var(--surface));border:1px solid var(--line);border-radius:30px;padding:30px;box-shadow:var(--shadow);position:relative}
+.panel-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
+.status{color:var(--primary);font-size:12px;font-weight:800}.online{width:8px;height:8px;border-radius:50%;background:var(--primary);display:inline-block;margin-right:5px}
+.avatar{width:110px;height:110px;border-radius:28px;background:linear-gradient(145deg,#163f37,#0b211d);display:grid;place-items:center;font-size:55px;margin-bottom:18px}
+.doctor h2{font-size:27px}.doctor p{color:var(--muted)}
+.info-list{margin-top:25px;display:grid;gap:10px}.info{display:flex;gap:12px;padding:12px;border:1px solid var(--line);border-radius:13px}.info b{display:block;font-size:13px}.info span{color:var(--muted);font-size:12px}
+section{padding:90px 0}.section-head{max-width:720px;margin-bottom:42px}.eyebrow{color:var(--primary);font-size:12px;font-weight:900;letter-spacing:1.5px}.section-head h2{font-size:clamp(30px,4vw,46px);line-height:1.1;margin:9px 0 12px}.section-head p{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{background:var(--surface);border:1px solid var(--line);border-radius:21px;padding:25px;transition:.25s}.card:hover{transform:translateY(-5px);border-color:var(--primary)}.card-icon{font-size:26px;margin-bottom:16px}.card h3{margin-bottom:7px}.card p{color:var(--muted);font-size:14px}
+.split{display:grid;grid-template-columns:.85fr 1.15fr;gap:50px;align-items:center}.visual{min-height:420px;border-radius:30px;background:radial-gradient(circle at 70% 20%,rgba(49,208,177,.2),transparent 35%),var(--surface);border:1px solid var(--line);display:grid;place-items:center;font-size:130px}
+.feature-list{display:grid;gap:13px;margin-top:22px}.feature{display:flex;gap:13px;align-items:flex-start}.check{width:28px;height:28px;border-radius:9px;background:var(--surface2);color:var(--primary);display:grid;place-items:center;font-weight:900;flex:none}
+.doctors{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.doctor-card{display:flex;gap:20px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:24px}.mini-avatar{width:90px;height:90px;border-radius:22px;background:var(--surface2);display:grid;place-items:center;font-size:42px;flex:none}.doctor-card h3{font-size:21px}.role{color:var(--primary);font-size:13px;font-weight:800}.doctor-card p:last-child{color:var(--muted);font-size:13px;margin-top:5px}
+.appointment{background:var(--surface2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.app-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:40px}.form{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:28px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{margin-bottom:15px}.field label{display:block;font-size:12px;font-weight:800;margin-bottom:6px}.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);background:var(--bg);color:var(--text);border-radius:11px;padding:12px;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--primary)}textarea{min-height:105px;resize:vertical}.note{font-size:11px;color:var(--muted);margin-top:10px}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.contact{padding:24px;border:1px solid var(--line);background:var(--surface);border-radius:20px}.contact h3{margin:8px 0 4px}.contact p{color:var(--muted);font-size:13px}
+footer{padding:45px 0 25px;border-top:1px solid var(--line)}.footer{display:flex;justify-content:space-between;gap:30px}.footer p{color:var(--muted);font-size:13px}.login-modal{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;place-items:center;z-index:100;padding:20px}.login-modal.open{display:grid}.modal{width:min(430px,100%);background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:28px;position:relative}.close{position:absolute;right:16px;top:13px;border:0;background:transparent;color:var(--muted);font-size:25px;cursor:pointer}.modal h2{margin-bottom:5px}.modal p{color:var(--muted);font-size:13px;margin-bottom:20px}.toast{position:fixed;left:50%;bottom:25px;transform:translate(-50%,20px);background:var(--surface);border:1px solid var(--line);padding:13px 18px;border-radius:12px;opacity:0;pointer-events:none;transition:.25s;z-index:200}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:900px){nav{display:none}.menu{display:block}.hero-grid,.split,.app-grid{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.hero{padding-top:65px}}
+@media(max-width:650px){section{padding:65px 0}.cards,.doctors,.contact-grid,.form-grid{grid-template-columns:1fr}.hero-actions .btn{width:100%}.doctor-card{align-items:flex-start}.footer{flex-direction:column}.nav .btn-primary{display:none}h1{letter-spacing:-2px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="#home"><span class="logo-mark">✚</span><span>Anbu Clinic</span></a>
+    <nav id="nav">
+      <a href="#about">About</a><a href="#services">Services</a><a href="#doctors">Doctors</a><a href="#appointment">Appointment</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="actions">
+      <button class="icon-btn" id="themeBtn" title="Toggle theme">☀</button>
+      <button class="btn btn-ghost" id="loginBtn">Login</button>
+      <button class="btn btn-primary" onclick="location.href='#appointment'">Book Visit</button>
+      <button class="icon-btn menu" id="menuBtn">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero">
+<div class="container hero-grid">
+<div>
+<span class="badge">● PATIENT-CENTRED PHYSIOTHERAPY CARE</span>
+<h1>Restore movement.<br><span class="gradient">Rebuild confidence.</span></h1>
+<p class="lead">A modern digital home for Anbu Physiotherapy Clinic — supporting personalized physiotherapy and healthcare consultations in Anaiyur, Madurai.</p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="#appointment">Schedule an Appointment →</a>
+<a class="btn btn-ghost" href="#services">View Treatments</a>
+</div>
+<div class="stats"><div><strong>01</strong>Assessment first</div><div><strong>02</strong>Personalized care</div><div><strong>03</strong>Progress focused</div></div>
+</div>
+
+<div class="hero-panel">
+<div class="panel-top"><span class="status"><span class="online"></span>Clinic profile</span><span>Madurai</span></div>
+<div class="avatar">👩‍⚕️</div>
+<div class="doctor"><h2>Dr. J. Jenani</h2><p>BPT., MPT (Ortho) · Physiotherapy Doctor</p></div>
+<div class="info-list">
+<div class="info">🏥 <div><b>Anbu Physiotherapy Clinic</b><span>H/98, TNHB Colony, Malligai Nagar</span></div></div>
+<div class="info">📍 <div><b>Anaiyur, Madurai</b><span>Tamil Nadu · 625017</span></div></div>
+<div class="info">👶 <div><b>Child Specialist</b><span>Dr. M. Jeyaraj · MBBS., DCH</span></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="container split">
+<div class="visual">🩺</div>
+<div>
+<span class="eyebrow">ABOUT ANBU CLINIC</span>
+<h2>Professional care, designed around the person.</h2>
+<p style="color:var(--muted)">This demo website presents a clean patient-facing experience for physiotherapy assessment, rehabilitation and child specialist consultation.</p>
+<div class="feature-list">
+<div class="feature"><span class="check">✓</span><div><b>Individual assessment</b><p style="color:var(--muted);font-size:13px">Understand the patient's needs before planning care.</p></div></div>
+<div class="feature"><span class="check">✓</span><div><b>Rehabilitation focused</b><p style="color:var(--muted);font-size:13px">Support movement, function and everyday activities.</p></div></div>
+<div class="feature"><span class="check">✓</span><div><b>Simple appointment flow</b><p style="color:var(--muted);font-size:13px">Choose a preferred date and time through the demo form.</p></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="services">
+<div class="container">
+<div class="section-head"><span class="eyebrow">SERVICES</span><h2>Care for different movement needs.</h2><p>Temporary service categories for the first design version. Janani can replace these with the clinic's verified services tomorrow.</p></div>
+<div class="cards">
+<article class="card"><div class="card-icon">🦴</div><h3>Orthopedic Physiotherapy</h3><p>Rehabilitation support for musculoskeletal and movement-related conditions.</p></article>
+<article class="card"><div class="card-icon">🏃</div><h3>Sports Rehabilitation</h3><p>Exercise and recovery support for return to regular activity.</p></article>
+<article class="card"><div class="card-icon">🧘</div><h3>Back & Neck Care</h3><p>Individualized approaches supporting mobility and everyday function.</p></article>
+<article class="card"><div class="card-icon">🦵</div><h3>Joint Rehabilitation</h3><p>Guided rehabilitation focused on strength and functional movement.</p></article>
+<article class="card"><div class="card-icon">💪</div><h3>Therapeutic Exercise</h3><p>Structured exercises selected around assessment and treatment goals.</p></article>
+<article class="card"><div class="card-icon">👶</div><h3>Pediatric Consultation</h3><p>Child specialist consultation available at the clinic.</p></article>
+</div>
+</div>
+</section>
+
+<section id="doctors">
+<div class="container">
+<div class="section-head"><span class="eyebrow">OUR TEAM</span><h2>Meet the doctors.</h2></div>
+<div class="doctors">
+<div class="doctor-card"><div class="mini-avatar">👩‍⚕️</div><div><h3>Dr. J. Jenani</h3><div class="role">BPT., MPT (Ortho)</div><p>Physiotherapy Doctor</p></div></div>
+<div class="doctor-card"><div class="mini-avatar">👨‍⚕️</div><div><h3>Dr. M. Jeyaraj</h3><div class="role">MBBS., DCH</div><p>Child Specialist</p></div></div>
+</div>
+</div>
+</section>
+
+<section class="appointment" id="appointment">
+<div class="container app-grid">
+<div>
+<span class="eyebrow">SMART APPOINTMENT DEMO</span>
+<h2>Choose a convenient date and time.</h2>
+<p style="color:var(--muted);margin-top:12px">Frontend-only for now. Tomorrow we can connect this to a real backend, database and clinic dashboard.</p>
+<div class="feature-list">
+<div class="feature"><span class="check">✓</span><div><b>Date selection</b><p style="color:var(--muted);font-size:13px">Patients can choose a preferred visit date.</p></div></div>
+<div class="feature"><span class="check">✓</span><div><b>Time selection</b><p style="color:var(--muted);font-size:13px">Preferred time is captured in the demo.</p></div></div>
+<div class="feature"><span class="check">✓</span><div><b>Future backend ready</b><p style="color:var(--muted);font-size:13px">Designed so the form can later submit to an API.</p></div></div>
+</div>
+</div>
+
+<form class="form" id="appointmentForm">
+<div class="form-grid">
+<div class="field"><label>Full name</label><input id="patientName" required placeholder="Your name"></div>
+<div class="field"><label>Phone number</label><input type="tel" required placeholder="Your phone number"></div>
+</div>
+<div class="form-grid">
+<div class="field"><label>Preferred date</label><input type="date" id="date" required></div>
+<div class="field"><label>Preferred time</label><input type="time" id="time" required></div>
+</div>
+<div class="field"><label>Service</label><select><option>Orthopedic Physiotherapy</option><option>Sports Rehabilitation</option><option>Back & Neck Care</option><option>Joint Rehabilitation</option><option>Therapeutic Exercise</option><option>Pediatric Consultation</option></select></div>
+<div class="field"><label>Message</label><textarea placeholder="Briefly describe your requirement"></textarea></div>
+<button class="btn btn-primary" type="submit">Request Appointment →</button>
+<p class="note">Demo only — no patient information is stored or transmitted.</p>
+</form>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<div class="section-head"><span class="eyebrow">CONTACT</span><h2>Find Anbu Physiotherapy Clinic.</h2></div>
+<div class="contact-grid">
+<div class="contact"><div>📍</div><h3>Address</h3><p>H/98, TNHB Colony, Malligai Nagar, Anaiyur, Madurai, Tamil Nadu 625017</p></div>
+<div class="contact"><div>👩‍⚕️</div><h3>Physiotherapy</h3><p>Dr. J. Jenani<br>BPT., MPT (Ortho)</p></div>
+<div class="contact"><div>👶</div><h3>Child Specialist</h3><p>Dr. M. Jeyaraj<br>MBBS., DCH</p></div>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container footer"><div><b>Anbu Physiotherapy Clinic</b><p>Modern physiotherapy care · Anaiyur, Madurai</p></div><p>© <span id="year"></span> Anbu Clinic · Demo frontend</p></div>
+</footer>
+
+<div class="login-modal" id="loginModal">
+<div class="modal">
+<button class="close" id="closeLogin">×</button>
+<h2>Clinic Portal</h2>
+<p>Temporary frontend login UI. Authentication will be connected to a backend later.</p>
+<div class="field"><label>Email</label><input type="email" placeholder="doctor@example.com"></div>
+<div class="field"><label>Password</label><input type="password" placeholder="••••••••"></div>
+<button class="btn btn-primary" style="width:100%" id="demoLogin">Sign in</button>
+<p class="note">Demo credentials are not validated or stored.</p>
+</div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const root=document.documentElement;
+const themeBtn=document.getElementById("themeBtn");
+const savedTheme=localStorage.getItem("anbu-theme");
+if(savedTheme){root.dataset.theme=savedTheme}
+themeBtn.textContent=root.dataset.theme==="dark"?"☀":"☾";
+themeBtn.onclick=()=>{
+  root.dataset.theme=root.dataset.theme==="dark"?"light":"dark";
+  localStorage.setItem("anbu-theme",root.dataset.theme);
+  themeBtn.textContent=root.dataset.theme==="dark"?"☀":"☾";
+};
+
+const loginModal=document.getElementById("loginModal");
+document.getElementById("loginBtn").onclick=()=>loginModal.classList.add("open");
+document.getElementById("closeLogin").onclick=()=>loginModal.classList.remove("open");
+loginModal.addEventListener("click",e=>{if(e.target===loginModal)loginModal.classList.remove("open")});
+
+document.getElementById("demoLogin").onclick=()=>{
+  loginModal.classList.remove("open");
+  showToast("Demo login clicked — backend authentication will be added later.");
+};
+
+document.getElementById("appointmentForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  showToast("Appointment request captured in demo mode. No data was sent.");
+  e.target.reset();
+});
+
+function showToast(message){
+  const toast=document.getElementById("toast");
+  toast.textContent=message;
+  toast.classList.add("show");
+  setTimeout(()=>toast.classList.remove("show"),3200);
+}
+
+document.getElementById("year").textContent=new Date().getFullYear();
+
+const date=document.getElementById("date");
+date.min=new Date().toISOString().split("T")[0];
+
+document.getElementById("menuBtn").onclick=()=>{
+  const nav=document.getElementById("nav");
+  nav.style.display=nav.style.display==="flex"?"none":"flex";
+  nav.style.flexDirection="column";
+  nav.style.position="absolute";
+  nav.style.top="76px";
+  nav.style.left="0";
+  nav.style.right="0";
+  nav.style.padding="20px";
+  nav.style.background="var(--bg)";
+  nav.style.borderBottom="1px solid var(--line)";
+};
+</script>
+</body>
+</html>
